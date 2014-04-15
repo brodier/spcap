@@ -48,7 +48,7 @@ module Spcap
     
     # Return fragment offset.
     def ip_off
-      @raw_data[4,4].unpack("n").first & 0xFFF
+      @raw_data[6,2].unpack("n").first & 0xFFF
     end
     
     

@@ -28,7 +28,7 @@ module Spcap
     def dport ; tcp_dport ; end
     
     # Return the value of 6-bits flag field.
-    def tcp_flags ; ( ip_data.getbyte(13) & 0x6F ) ; end
+    def tcp_flags ; ( ip_data.getbyte(13) & 0x3F ) ; end
 
     # Return the value of 6-bits flag field as string like ".A...F".
     def tcp_flags_s
